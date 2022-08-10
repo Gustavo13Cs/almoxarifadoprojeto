@@ -6,10 +6,10 @@
 <h2>Cadastrar Colaborador</h2>
 
 <div>
-    <form action="/Colaborador/Create">
+    <form action="/Colaborador/Create" method="post" >
         <div>
             <label>Nome:</label>
-            <input type="text" id="name" name="name" maxlength="100" required />
+            <input type="text" id="name" name="nome" maxlength="100" required />
         </div>
         <div>
             <label>Cargo:</label>
@@ -18,10 +18,11 @@
 
         <div>
             <label>Area</label>
-            <select id="area" name="area">
-                <option value="1">II</option>
-                <option value="2">Redes</option>
-
+            <select id="area" name="codigoarea">
+               @foreach (var item in ViewBag.listaArea)
+                {
+                    <option value="@item.AREID">@item.AREDESCRICAO</option>
+                }
             </select>
 
             <div>

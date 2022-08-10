@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<TDSAlmaxarifado.Models.Colaborador>
 @{
     ViewBag.Title = "index";
 }
@@ -26,29 +26,32 @@
                 Òpições
             </th>
         </tr>
-           
+
     </thead>
 
     <tbody>
-        <tr>
-            <td>
-                02
-            </td>
-            <td>
-                Reginaldo
-            </td>
-            <td>
-                BigBoss
-            </td>
-            <td>
-                Redes
-            </td>            
-            <td>
-                <a href="/Colaborador/Editar?id=1"><button type="button" class="btn btn-warning">Editar</button></a>
-                <a href="/Colaborador/Exibir?id=1"><button type="button" class="btn btn-primary">Exibir</button></a>
-                <a href="/Colaborador/Excluir?id=1"><button type="button" class="btn btn-danger">Excluir</button></a>
-            </td>
-        </tr>
-       </tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.colid
+                </td>
+                <td>
+                   @item.colnome
+                </td>
+                <td>
+                   @item.colcargo
+                </td>
+                <td>
+                    @item.AREA.AREDESCRICAO
+                </td>
+                <td>
+                    <a href="/Colaborador/Editar?id=@item.colid"><button type="button" class="btn btn-warning">Editar</button></a>
+                    <a href="/Colaborador/Exibir?id=@item.colid"><button type="button" class="btn btn-primary">Exibir</button></a>
+                    <a href="/Colaborador/Excluir?id=@item.colid"><button type="button" class="btn btn-danger">Excluir</button></a>
+                </td>
+            </tr>
+        }
+    </tbody>
 </table>
 
