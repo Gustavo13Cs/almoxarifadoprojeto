@@ -1,0 +1,35 @@
+﻿@model  TDSAlmaxarifado.Models.PRODUTO
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Exibir Produtos</h2>
+
+<div>
+    <form action="/Produto/Details" method="post">
+        <label>@Model.PRODESCRICAO</label>
+
+        <div>
+            <label>Minimo</label>
+            <label>@Model.PROMINIMO</label>
+
+        </div>
+
+        <div>
+            <label>Maximo</label>
+            <label>@Model.PROMAXIMO</label>
+
+        </div>
+
+        <div>
+            <label>Estoque Atual</label>
+            <label>@Model.PROESTOQUE</label>
+        </div>
+        <div>
+            <a href="/Produto/Index"> <button type="button" class="btn btn-primary">Voltar</button></a>
+        </div>
+
+    </form>
+
+</div>
+

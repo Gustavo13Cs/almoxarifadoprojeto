@@ -1,0 +1,38 @@
+﻿@model  TDSAlmaxarifado.Models.PRODUTO
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Excluindos Produtos</h2>
+
+<div>
+    <form action="/Produto/DeleteConfirma?id=@Model.PROID" method="post">
+        <label>Descrição</label>
+        <label>@Model.PRODESCRICAO</label>
+
+        <div>
+            <label>Minimo</label>
+            <label>@Model.PROMINIMO</label>
+
+        </div>
+
+        <div>
+            <label>Maximo</label>
+            <label>@Model.PROMAXIMO</label>
+
+        </div>
+
+        <div>
+            <label>Estoque Atual</label>
+            <label>@Model.PROESTOQUE</label>
+        </div>
+
+        <div>
+            <a href="/Produto/Index"> <button type="button" class="btn btn-primary">Voltar</button></a>
+            <a href="/Produto/Index"><button type="submit" class="btn btn-danger">Excluir</button> </a>
+        </div>
+
+    </form>
+
+</div>
+

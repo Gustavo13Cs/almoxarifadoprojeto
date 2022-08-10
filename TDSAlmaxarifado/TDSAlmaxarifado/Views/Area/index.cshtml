@@ -1,0 +1,44 @@
+﻿@model IEnumerable<TDSAlmaxarifado.Models.AREA>
+@{
+    ViewBag.Title = "index";
+}
+
+<h2>Cadastrar Area</h2> <a href="/Area/Create">
+    <button type="button" class="btn btn-success">Novo</button>
+</a>
+
+<table class="table">
+    <thead class="table-dark">
+        <tr>
+            <th>
+                Codigo
+            </th>
+            <th>
+                Descrição
+            </th>
+            <th>
+                Opções
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.AREID
+                </td>
+                <td>
+                    @item.AREDESCRICAO
+                </td>
+                <td>
+                    <a href="/Area/Editar?id=@item.AREID"><button type="button" class="btn btn-warning">Editar</button></a>
+                    <a href="/Area/Exibir?id=@item.AREID"><button type="button" class="btn btn-primary">Exibir</button></a>
+                    <a href="/Area/Excluir?id=@item.AREID"><button type="button" class="btn btn-danger">Excluir</button></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "index";
+}
+
+<h2>Colaboradoes</h2> <a href="/Colaborador/Create">
+    <button type="button" class="btn btn-success">Novo</button>
+</a>
+
+<table class="table">
+    <thead class="table-dark">
+        <tr>
+            <th>
+                Codigo
+            </th>
+            <th>
+                Nome
+            </th>
+            <th>
+                Cargo
+            </th>
+            <th>
+                Àrea
+            </th>
+            <th>
+                Òpições
+            </th>
+        </tr>
+           
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>
+                02
+            </td>
+            <td>
+                Reginaldo
+            </td>
+            <td>
+                BigBoss
+            </td>
+            <td>
+                Redes
+            </td>            
+            <td>
+                <a href="/Colaborador/Editar?id=1"><button type="button" class="btn btn-warning">Editar</button></a>
+                <a href="/Colaborador/Exibir?id=1"><button type="button" class="btn btn-primary">Exibir</button></a>
+                <a href="/Colaborador/Excluir?id=1"><button type="button" class="btn btn-danger">Excluir</button></a>
+            </td>
+        </tr>
+       </tbody>
+</table>
+

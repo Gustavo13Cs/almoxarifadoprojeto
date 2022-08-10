@@ -1,0 +1,37 @@
+﻿@model  TDSAlmaxarifado.Models.PRODUTO
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Atualizando Produtos</h2>
+
+<div>
+    <form action="/Produto/Edit?id=@Model.PROID" method="post">
+        <label for="descricao">Descrição</label>
+        <input type="text" class="form-control" maxlength="100" id="descricao" name="descricao" value=@Model.PRODESCRICAO required />
+
+        <div>
+            <label for="minimo">Minimo</label>
+            <input type="number" class="form-control" maxlength="100" id="minimo" name="minimo" value=@Model.PROMINIMO required />
+
+        </div>
+
+        <div>
+            <label for="maximo">Maximo</label>
+            <input type="number" class="form-control" id="maximo" name="maximo"  value=@Model.PROMAXIMO required />
+
+        </div>
+        <div>
+            <label for="estoque">Estoque Atual</label>
+            <input type="number" class="form-control" id="estoque" name="estoque"  value=@Model.PROESTOQUE required />
+        </div>
+        <br />
+        <div>
+            <a href="/Produto/Index"> <button type="button" class="btn btn-primary">Voltar</button>  </a>
+            <button type="submit" class="btn btn-success">Salvar</button>
+        </div>
+
+    </form>
+
+</div>
+
